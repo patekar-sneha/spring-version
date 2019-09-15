@@ -51,7 +51,9 @@
 				<configuration>
 					<file>pom.xml</file>
 					<regex>false</regex>
-					<replacements>
+					<token>@@prjectVersion@@</token>
+					<value>prjectVersion</value>
+					<!-- <replacements>
 						<replacement>
 							<token>#BUILD_NUMBER#</token>
 							<value>${BUILD_NUMBER}</value>
@@ -60,7 +62,7 @@
 							<token>value="prjectVersion"</token>
 							<value>value="${prjectVersion}"</value>
 						</replacement>
-					</replacements>
+					</replacements> -->
 				</configuration>
 			</plugin>
 
