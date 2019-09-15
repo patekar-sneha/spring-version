@@ -39,8 +39,8 @@
 					<file>pom.xml</file>
 					<replacements>
 						<replacement>
-							<token>maven-version-number</token>
-							<value>${build_number}</value>
+							<token>$BUILD_NUMBER$</token>
+							<value>${build.number}</value>
 						</replacement>
 					</replacements>
 				</configuration>
