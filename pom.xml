@@ -58,7 +58,7 @@
 						</replacement>
 						<replacement>
 							<token>prjectVersion</token>
-							<value>${version}</value>
+							<value>${prjectVersion}</value>
 						</replacement>
 					</replacements>
 				</configuration>
