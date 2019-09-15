@@ -19,6 +19,7 @@
 			<activation>
 				<property>
 					<name>env.BUILD_NUMBER</name>
+					<value>${build.number}</value>
 				</property>
 			</activation>
 			<properties>
@@ -51,18 +52,17 @@
 				<configuration>
 					<file>pom.xml</file>
 					<regex>false</regex>
-					<token>@@prjectVersion@@</token>
-					<value>prjectVersion</value>
-					<!-- <replacements>
+					
+					<replacements>
 						<replacement>
 							<token>#BUILD_NUMBER#</token>
 							<value>${BUILD_NUMBER}</value>
 						</replacement>
 						<replacement>
-							<token>value="prjectVersion"</token>
-							<value>value="${prjectVersion}"</value>
+							<token>prjectVersion</token>
+							<value>${prjectVersion}</value>
 						</replacement>
-					</replacements> -->
+					</replacements>
 				</configuration>
 			</plugin>
 
