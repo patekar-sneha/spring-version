@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>myproject</artifactId>
-	<version>0.0.1.#${BUILD_NUMBER}-SNAPSHOT</version>
+	<version>0.0.1.BUILD_NUMBER-SNAPSHOT</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -52,7 +52,7 @@
 					<replacements>
 						<replacement>
 							<token>#BUILD_NUMBER#</token>
-							<value>#${BUILD_NUMBER}</value>
+							<value>${BUILD_NUMBER}</value>
 						</replacement>
 					</replacements>
 				</configuration>
