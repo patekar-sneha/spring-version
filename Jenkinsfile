@@ -10,7 +10,7 @@ stage ('Build') {
 
 	checkout scm
 	
-	bat 'mvn clean install -Dbuild.number=${BUILD_NUMBER}'
+	bat 'mvn clean install -Ptest -Dbuild.number=${BUILD_NUMBER}'
 
 }
 

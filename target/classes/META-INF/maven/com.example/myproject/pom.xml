@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>myproject</artifactId>
-	<version>0.0.1.BUILD_NUMBER-SNAPSHOT</version>
+	<version>${prjectVersion}</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,6 +22,7 @@
 			</property>
 		</activation>
 		<properties>
+		<prjectVersion>0.0.1.${BUILD_NUMBER}-SNAPSHOT</prjectVersion>
 		</properties>
 	</profile>
 </profiles>
@@ -38,7 +39,7 @@
 			<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>replacer</artifactId>
-				<version>1.5.3</version>
+				<version>1.4.1</version>
 				<executions>
 					<execution>
 						<phase>prepare-package</phase>
@@ -53,6 +54,10 @@
 						<replacement>
 							<token>#BUILD_NUMBER#</token>
 							<value>${BUILD_NUMBER}</value>
+						</replacement>
+							<replacement>
+							<token>prjectVersion</token>
+							<value>${version}</value>
 						</replacement>
 					</replacements>
 				</configuration>
