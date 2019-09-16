@@ -11,7 +11,7 @@ stage ('Build') {
 
 	checkout scm
 	
-	bat 'mvn -Drevision=1.0.0.{BUILD_NUMBER} clean install'
+	bat 'mvn -Drevision=1.0.0.${BUILD_NUMBER} clean install'
 	withCredentials([usernamePassword(credentialsId: 'gitCredentialNew', passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
     dir("${workspace}/"){
     bat ('git init')
