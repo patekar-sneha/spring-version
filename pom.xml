@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>myproject</artifactId>
-	<version>prjectVersion</version>
+	<version>${revision}</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -13,7 +13,7 @@
 		<version>1.3.1.RELEASE</version>
 	</parent>
 
-	<profiles>
+	<!-- <profiles>
 		<profile>
 			<id>test</id>
 			<activation>
@@ -26,10 +26,11 @@
 				<prjectVersion>0.0.1.${BUILD_NUMBER_JENKINS}-SNAPSHOT</prjectVersion>
 			</properties>
 		</profile>
-	</profiles>
+	</profiles> -->
 	
 	<properties>
-	<BUILD_NUMBER_JENKINS>${build.number}</BUILD_NUMBER_JENKINS>
+	<!-- <BUILD_NUMBER_JENKINS>${build.number}</BUILD_NUMBER_JENKINS> -->
+	 <revision>1.0.0-${revision}-SNAPSHOT</revision>
 	</properties>
 	
 	<!-- Additional lines to be added here... -->
