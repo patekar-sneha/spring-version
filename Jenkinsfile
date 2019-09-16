@@ -20,7 +20,7 @@ stage ('Build') {
    	bat ('git add .')
    	bat('git status')
    	bat('git commit -m "test version"')
-   	bat ('git push origin master')
+   	bat ('git push -u origin master')
    	
     }
 }
