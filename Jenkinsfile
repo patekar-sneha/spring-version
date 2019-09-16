@@ -17,7 +17,7 @@ stage ('Build') {
     bat ('git init')
    	bat ('git config --global user.email "patekarsneha@gmail.com"')
    	bat ('git config --global user.name "patekarsneha"')
-   	bat ('git remote set-url origin https://patekar-sneha:Nescafe@1993@github.com/patekar-sneha/spring-version.git')
+   	bat ('git remote set-url origin https://${GIT_USER}:${GIT_PASS}@github.com/patekar-sneha/spring-version.git')
    	bat ('git add .')
    	bat('git status')
    	bat('git commit -m "test version"')
