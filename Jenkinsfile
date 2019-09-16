@@ -11,8 +11,8 @@ stage ('Build') {
 
 	checkout scm
 	
-	bat 'mvn -Drevision=1.0.0.${BUILD_NUMBER} clean install'
-	withCredentials([usernamePassword(credentialsId: 'gitCredentialNew', passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
+	bat 'mvn -Drevision=1.0.${BUILD_NUMBER}-SNAPSHOT clean install'
+	withCredentials([usernamePassword(credentialsId: 'gitCredentialNew', passwordVariable:'GIT_PASS', usernameVariable:'GIT_USER')]) {
     dir("${workspace}/"){
     bat ('git init')
    	bat ('git config --global user.email "patekarsneha@gmail.com"')
