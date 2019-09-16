@@ -12,7 +12,7 @@ stage ('Build') {
 	checkout scm
 	
 	bat 'mvn -Drevision=${BUILD_NUMBER} clean package'
-	withCredentials([usernamePassword(credentialsId: 'gitCredential', passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER'))]) {
+	withCredentials([usernamePassword(credentialsId: 'gitCredential', passwordVariable: 'GIT_PASS', usernameVariable: 'GIT_USER')]) {
     dir("${workspace}/"){
     bat ('git init')
    	bat ('git config --global user.email "patekarsneha@gmail.com"')
