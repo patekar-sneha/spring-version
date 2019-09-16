@@ -26,11 +26,11 @@
 				<prjectVersion>0.0.1.${BUILD_NUMBER_JENKINS}-SNAPSHOT</prjectVersion>
 			</properties>
 		</profile>
-	</profiles> -->
+	</profiles>  -->
 	
 	<properties>
-	<!-- <BUILD_NUMBER_JENKINS>${build.number}</BUILD_NUMBER_JENKINS> -->
-	 <revision>1.0.0-${revision}-SNAPSHOT</revision>
+<!--  <BUILD_NUMBER_JENKINS>${build.number}</BUILD_NUMBER_JENKINS>  -->
+	  <revision>1.0.0-SNAPSHOT</revision>
 	</properties>
 	
 	<!-- Additional lines to be added here... -->
@@ -42,8 +42,7 @@
 	</dependencies>
 	<build>
 		<plugins>
-
-<!-- 			<plugin>
+		<!-- 	<plugin>
 				<groupId>com.google.code.maven-replacer-plugin</groupId>
 				<artifactId>replacer</artifactId>
 				<version>1.5.3</version>
@@ -70,9 +69,9 @@
 						</replacement>
 					</replacements>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
- -->			<plugin>
+		<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
