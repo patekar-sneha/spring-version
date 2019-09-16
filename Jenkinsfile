@@ -21,7 +21,7 @@ stage ('Build') {
    	bat ('git add .')
    	bat('git status')
    	bat('git commit -m "test version"')
-   	bat ('git push refs/remotes/origin/master HEAD:master')
+   	bat ('git push origin HEAD:master')
    	
     }
 }
