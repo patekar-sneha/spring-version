@@ -5,7 +5,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>myproject</artifactId>
-	<version>${prjectVersion}</version>
+	<version>prjectVersion</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,10 +23,15 @@
 				</property>
 			</activation>
 			<properties>
-				<prjectVersion>0.0.1.${BUILD_NUMBER}-SNAPSHOT</prjectVersion>
+				<prjectVersion>0.0.1.${BUILD_NUMBER_JENKINS}-SNAPSHOT</prjectVersion>
 			</properties>
 		</profile>
 	</profiles>
+	
+	<properties>
+	<BUILD_NUMBER_JENKINS>${build.number}</BUILD_NUMBER_JENKINS>
+	</properties>
+	
 	<!-- Additional lines to be added here... -->
 	<dependencies>
 		<dependency>
@@ -55,8 +60,8 @@
 					
 					<replacements>
 						<replacement>
-							<token>#BUILD_NUMBER#</token>
-							<value>${BUILD_NUMBER}</value>
+							<token>${build.number}</token>
+							<value>BUILD_NUMBER_JENKINS</value>
 						</replacement>
 						<replacement>
 							<token>prjectVersion</token>
